@@ -1,1 +1,2106 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Birds - Complete Educational Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bird-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .feather-gradient {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        }
+        
+        .wing-gradient {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .beak-gradient {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .migration-gradient {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        
+        .prey-gradient {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .section-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .bird-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .bird-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .bird-icon {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .quiz-option {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .quiz-option:hover {
+            transform: translateX(5px);
+            background-color: #f3f4f6;
+        }
+        
+        .quiz-option.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        
+        .quiz-option.correct {
+            background-color: #dcfce7;
+            border-color: #16a34a;
+        }
+        
+        .quiz-option.incorrect {
+            background-color: #fecaca;
+            border-color: #dc2626;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+        
+        .bird-feature-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        }
+        
+        /* Print styles for PDF export */
+        @media print {
+            .no-print { display: none !important; }
+            * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <section class="bird-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 text-9xl">🦅</div>
+            <div class="absolute top-32 right-20 text-6xl">🦜</div>
+            <div class="absolute bottom-20 left-20 text-7xl">🦢</div>
+            <div class="absolute bottom-32 right-10 text-8xl">🕊️</div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 class="heading-font text-6xl md:text-8xl font-bold mb-8 text-shadow animate-fade-in-up">
+                World of Birds
+            </h1>
+            <p class="text-2xl md:text-3xl mb-12 max-w-4xl mx-auto animate-fade-in-up text-shadow">
+                Discover the fascinating world of over 10,000 bird species and learn about their incredible adaptations, behaviors, and characteristics
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-3 backdrop-filter backdrop-blur-sm">
+                    <i class="fas fa-feather-alt mr-2"></i> Feathers
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-3 backdrop-filter backdrop-blur-sm">
+                    <i class="fas fa-plane mr-2"></i> Flight
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-3 backdrop-filter backdrop-blur-sm">
+                    <i class="fas fa-map-marked-alt mr-2"></i> Migration
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-full px-6 py-3 backdrop-filter backdrop-blur-sm">
+                    <i class="fas fa-search mr-2"></i> Birds of Prey
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="heading-font text-5xl font-bold text-gray-800 mb-8">Introduction to Birds</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Did you know that there are more than 10,000 species of birds? From the tiny hummingbird to the massive ostrich, birds inhabit every continent and make our world a beautiful place to live. They come in vivid colors and produce different sounds, each species perfectly adapted to its environment.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bird-card section-card rounded-3xl p-8 text-center">
+                    <div class="text-6xl mb-6">🐦</div>
+                    <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-4">10,000+ Species</h3>
+                    <p class="text-gray-600">Birds are one of the most diverse groups of animals on Earth, with incredible variety in size, color, and behavior.</p>
+                </div>
+                
+                <div class="bird-card section-card rounded-3xl p-8 text-center">
+                    <div class="text-6xl mb-6">🌍</div>
+                    <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-4">Global Distribution</h3>
+                    <p class="text-gray-600">Birds can be found on every continent, from the Arctic tundra to tropical rainforests and desert oases.</p>
+                </div>
+                
+                <div class="bird-card section-card rounded-3xl p-8 text-center">
+                    <div class="text-6xl mb-6">🎨</div>
+                    <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-4">Beautiful Colors</h3>
+                    <p class="text-gray-600">From the brilliant blues of a peacock to the vibrant reds of a cardinal, birds display nature's most stunning colors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bird Anatomy Section -->
+    <section class="py-20 feather-gradient">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Bird Anatomy</h2>
+                
+                <div class="bg-white rounded-3xl p-12 shadow-2xl mb-16">
+                    <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-8 text-center">Parts of a Bird</h3>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                            <div class="text-4xl mb-3">👑</div>
+                            <h4 class="font-semibold text-gray-800">Crown</h4>
+                            <p class="text-sm text-gray-600 mt-2">Top of the head</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl">
+                            <div class="text-4xl mb-3">🦆</div>
+                            <h4 class="font-semibold text-gray-800">Beak</h4>
+                            <p class="text-sm text-gray-600 mt-2">For eating and feeding</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl">
+                            <div class="text-4xl mb-3">👁️</div>
+                            <h4 class="font-semibold text-gray-800">Eye</h4>
+                            <p class="text-sm text-gray-600 mt-2">For vision and hunting</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl">
+                            <div class="text-4xl mb-3">🎵</div>
+                            <h4 class="font-semibold text-gray-800">Throat</h4>
+                            <p class="text-sm text-gray-600 mt-2">For singing and calls</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl">
+                            <div class="text-4xl mb-3">🔄</div>
+                            <h4 class="font-semibold text-gray-800">Back</h4>
+                            <p class="text-sm text-gray-600 mt-2">Upper body support</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl">
+                            <div class="text-4xl mb-3">💪</div>
+                            <h4 class="font-semibold text-gray-800">Breast</h4>
+                            <p class="text-sm text-gray-600 mt-2">Flight muscle attachment</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl">
+                            <div class="text-4xl mb-3">✈️</div>
+                            <h4 class="font-semibold text-gray-800">Wing</h4>
+                            <p class="text-sm text-gray-600 mt-2">For flight and balance</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl">
+                            <div class="text-4xl mb-3">🦵</div>
+                            <h4 class="font-semibold text-gray-800">Feet</h4>
+                            <p class="text-sm text-gray-600 mt-2">For perching and walking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feathers Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Feathers: Nature's Marvel</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div>
+                        <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-6">What Makes Feathers Special?</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Feathers are unique to birds and are found in all bird species. They give birds their beautiful colors and serve multiple important functions. Famous colorful birds include peacocks, macaws, and flamingos.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center bg-blue-50 p-4 rounded-xl">
+                                <div class="text-2xl mr-4">🌡️</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Temperature Control</h4>
+                                    <p class="text-gray-600">Keep the body warm in cold weather</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center bg-green-50 p-4 rounded-xl">
+                                <div class="text-2xl mr-4">🚁</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Flight Support</h4>
+                                    <p class="text-gray-600">Essential for flying and gliding</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-6">Types of Feathers</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bird-feature-card p-6 rounded-2xl">
+                                <h4 class="font-bold text-xl text-gray-800 mb-3">✈️ Flight Feathers</h4>
+                                <p class="text-gray-600">Large feathers found on wings and tail that help birds fly through the air.</p>
+                            </div>
+                            
+                            <div class="bird-feature-card p-6 rounded-2xl">
+                                <h4 class="font-bold text-xl text-gray-800 mb-3">🛡️ Contour Feathers</h4>
+                                <p class="text-gray-600">Protective feathers that shield birds from weather conditions.</p>
+                            </div>
+                            
+                            <div class="bird-feature-card p-6 rounded-2xl">
+                                <h4 class="font-bold text-xl text-gray-800 mb-3">☁️ Down Feathers</h4>
+                                <p class="text-gray-600">Tiny, soft feathers that provide insulation and fluffiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl p-8">
+                    <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-4 text-center">💭 Critical Thinking</h3>
+                    <p class="text-lg text-gray-700 text-center">
+                        What would happen if a bird did not have feathers? Think about how this would affect their ability to fly, stay warm, and survive in different environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wings Section -->
+    <section class="py-20 wing-gradient">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Wings: Built for Purpose</h2>
+                
+                <div class="bg-white rounded-3xl p-12 shadow-2xl mb-12">
+                    <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-8 text-center">Not All Birds Fly!</h3>
+                    
+                    <p class="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+                        While wings are primarily used for flight, not all birds can fly. These are called flightless birds, and they have adapted their wings for other purposes.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl">
+                            <div class="text-5xl mb-4">🦓</div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-2">Ostrich</h4>
+                            <p class="text-gray-600">World's largest bird, uses wings for balance while running</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-brown-50 to-brown-100 rounded-2xl">
+                            <div class="text-5xl mb-4">🦆</div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-2">Emu</h4>
+                            <p class="text-gray-600">Large Australian bird, excellent runner with wing-assisted balance</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl">
+                            <div class="text-5xl mb-4">🥝</div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-2">Kiwi</h4>
+                            <p class="text-gray-600">Tiny wings hidden under feathers, ground-dwelling bird</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                            <div class="text-5xl mb-4">🐧</div>
+                            <h4 class="font-bold text-xl text-gray-800 mb-2">Penguin</h4>
+                            <p class="text-gray-600">Wings modified into flippers for swimming underwater</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white rounded-2xl p-8 shadow-xl">
+                        <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-6">🦅 Specialized Wing Shapes</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4 mt-1">⚡</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Sharp-tipped Wings</h4>
+                                    <p class="text-gray-600">Eagles and falcons have sharp-tipped wings for high-speed flight and soaring at great heights.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4 mt-1">🚁</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Hovering Wings</h4>
+                                    <p class="text-gray-600">Hummingbirds have special wings that allow them to hover in place for extended periods.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl">
+                        <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-6">🏊 Penguin's Special Adaptation</h3>
+                        <p class="text-gray-600 mb-4">
+                            Penguins are a perfect example of evolutionary adaptation. Their wings have transformed into powerful flippers that make them excellent swimmers.
+                        </p>
+                        <div class="bg-blue-50 p-4 rounded-xl">
+                            <p class="text-blue-800 font-semibold">💡 Fun Fact:</p>
+                            <p class="text-blue-700">Penguins can "fly" underwater at speeds up to 22 mph using their flipper-wings!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beaks Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Beaks & Bills: Specialized Tools</h2>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-12 mb-16">
+                    <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-6 text-center">The Perfect Tool for Every Job</h3>
+                    <p class="text-lg text-gray-600 text-center max-w-4xl mx-auto">
+                        Beaks perform various functions like eating, sucking nectar from flowers, and pecking wood. The shape and size of a beak tells us what the bird eats and what type of bird it is - whether it's seed-eating, nectar-sucking, or prey-hunting.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bird-feature-card p-8 rounded-3xl">
+                        <div class="text-5xl mb-4 text-center">🌰</div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 text-center">Cone-shaped Beaks</h3>
+                        <p class="text-gray-600 mb-4">
+                            Birds like sparrows and goldfinches have short, cone-shaped beaks perfect for cracking open seeds.
+                        </p>
+                        <div class="bg-brown-50 p-3 rounded-lg">
+                            <p class="text-sm text-brown-700"><strong>Perfect for:</strong> Seeds of flowers and plants</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bird-feature-card p-8 rounded-3xl">
+                        <div class="text-5xl mb-4 text-center">🌺</div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 text-center">Nectar-sucking Beaks</h3>
+                        <p class="text-gray-600 mb-4">
+                            Long, thin, and slender beaks specially designed to reach deep into flowers and extract nectar.
+                        </p>
+                        <div class="bg-pink-50 p-3 rounded-lg">
+                            <p class="text-sm text-pink-700"><strong>Perfect for:</strong> Probing flowers and extracting nectar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bird-feature-card p-8 rounded-3xl">
+                        <div class="text-5xl mb-4 text-center">🪝</div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 text-center">Sharp & Curved Beaks</h3>
+                        <p class="text-gray-600 mb-4">
+                            Hook-like beaks that are extremely sharp, perfect for tearing apart prey. Found in carnivorous birds.
+                        </p>
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <p class="text-sm text-red-700"><strong>Perfect for:</strong> Eagles, vultures, and other predatory birds</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bird-feature-card p-8 rounded-3xl">
+                        <div class="text-5xl mb-4 text-center">🍇</div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 text-center">Short & Slender Beaks</h3>
+                        <p class="text-gray-600 mb-4">
+                            Short but slightly flat beaks that help birds feed on seeds and fruits. Some may be slightly curved.
+                        </p>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="text-sm text-purple-700"><strong>Perfect for:</strong> Doves, pigeons, and parrots</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bird-feature-card p-8 rounded-3xl">
+                        <div class="text-5xl mb-4 text-center">🦆</div>
+                        <h3 class="heading-font text-xl font-bold text-gray-800 mb-4 text-center">Flat Beaks</h3>
+                        <p class="text-gray-600 mb-4">
+                            Wide, flat beaks designed to catch food from ponds and rivers. Some have specialized filter systems.
+                        </p>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="text-sm text-blue-700"><strong>Perfect for:</strong> Ducks and flamingos for aquatic feeding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Claws Section -->
+    <section class="py-20 beak-gradient">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Claws & Talons: Gripping Adaptations</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="text-4xl mr-4">🦅</div>
+                                <h3 class="heading-font text-2xl font-semibold text-gray-800">Birds of Prey</h3>
+                            </div>
+                            <p class="text-gray-600">
+                                Predatory birds have sharp and strong claws to catch and hold their prey. They use these powerful talons to pick up prey and carry them to safer locations for feeding.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="text-4xl mr-4">🌿</div>
+                                <h3 class="heading-font text-2xl font-semibold text-gray-800">Perching Birds</h3>
+                            </div>
+                            <p class="text-gray-600">
+                                These birds have independent but flexible toes with one toe pointing backwards, allowing them to perch comfortably on tree branches for extended periods.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="text-4xl mr-4">🏊</div>
+                                <h3 class="heading-font text-2xl font-semibold text-gray-800">Swimming Birds</h3>
+                            </div>
+                            <p class="text-gray-600">
+                                Ducks and flamingos have wide, webbed feet with digits connected by skin, making them excellent swimmers and allowing them to wade through water easily.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="text-4xl mr-4">🌳</div>
+                                <h3 class="heading-font text-2xl font-semibold text-gray-800">Climbing Birds</h3>
+                            </div>
+                            <p class="text-gray-600">
+                                These birds have two toes pointing forward and two pointing backwards, enabling them to climb up trees efficiently while hunting for insects on bark and branches.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="text-4xl mr-4">🦢</div>
+                                <h3 class="heading-font text-2xl font-semibold text-gray-800">Wading Birds</h3>
+                            </div>
+                            <p class="text-gray-600">
+                                Birds like herons and cranes don't swim but wade slowly through water. They have long, thin legs with strong, spread feet for stability in shallow water.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl p-8">
+                            <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4">🥚 Did You Know?</h3>
+                            <p class="text-gray-700">
+                                All birds lay eggs! They can be white, colored, or even spotted. An ostrich lays the biggest eggs in the bird world, while some hummingbird eggs are smaller than jellybeans!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">How Do Birds Fly?</h2>
+                
+                <div class="bg-gradient-to-br from-sky-50 to-blue-100 rounded-3xl p-12 mb-16">
+                    <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-8 text-center">The Science of Flight</h3>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-6">✈️ Wing Movement</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="text-2xl mr-4 mt-1">📈</div>
+                                    <div>
+                                        <p class="text-gray-700 font-medium">Step 1: Wing Flapping</p>
+                                        <p class="text-gray-600">Birds flap their wings, which allows air to move faster above the wings, creating lift.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-2xl mr-4 mt-1">➡️</div>
+                                    <div>
+                                        <p class="text-gray-700 font-medium">Step 2: Wing Spreading</p>
+                                        <p class="text-gray-600">They then spread their wings in a strong straight line to continue flying and soaring.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-6">⚖️ Body Design</h4>
+                            <div class="bg-white p-6 rounded-2xl">
+                                <p class="text-gray-600 mb-4">
+                                    The weight and shape of a bird's body are crucial for flight. Birds are generally lightweight with most of their weight concentrated in the center of their body.
+                                </p>
+                                <div class="bg-blue-50 p-4 rounded-xl">
+                                    <p class="text-blue-800 font-semibold">💡 Key Factor:</p>
+                                    <p class="text-blue-700">The sides of the body (wings and feathers) are much lighter than the center, creating perfect balance for flight.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Migration Section -->
+    <section class="py-20 migration-gradient">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Bird Migration: Epic Journeys</h2>
+                
+                <div class="bg-white rounded-3xl p-12 shadow-2xl mb-12">
+                    <h3 class="heading-font text-3xl font-semibold text-gray-800 mb-8 text-center">What is Migration?</h3>
+                    <p class="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-8">
+                        Migration is the seasonal movement of birds from one place to another. Many birds undertake incredible journeys, traveling thousands of miles across continents to find the perfect conditions for survival.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl">
+                            <div class="text-4xl mb-4">🍎</div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">Food Availability</h4>
+                            <p class="text-gray-600">Birds migrate to find abundant food sources</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                            <div class="text-4xl mb-4">💧</div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">Water Sources</h4>
+                            <p class="text-gray-600">Access to fresh water for drinking and bathing</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl">
+                            <div class="text-4xl mb-4">🌤️</div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">Better Weather</h4>
+                            <p class="text-gray-600">Escaping harsh winter conditions</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl">
+                            <div class="text-4xl mb-4">🌡️</div>
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">Ideal Temperature</h4>
+                            <p class="text-gray-600">Finding comfortable temperatures for breeding and living</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-orange-100 to-red-100 rounded-3xl p-8">
+                    <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-4 text-center">🌍 Amazing Migration Facts</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl">
+                            <h4 class="font-semibold text-gray-800 mb-2">📏 Distance Records</h4>
+                            <p class="text-gray-600">Some birds travel over 25,000 miles in a single migration journey - equivalent to flying around the entire Earth!</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl">
+                            <h4 class="font-semibold text-gray-800 mb-2">⏰ Duration</h4>
+                            <p class="text-gray-600">Migratory birds can travel for several days or even weeks non-stop to reach their destination.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birds of Prey Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">Birds of Prey: Nature's Hunters</h2>
+                
+                <div class="prey-gradient rounded-3xl p-12 mb-16">
+                    <h3 class="heading-font text-3xl font-semibold text-white mb-8 text-center text-shadow">What are Birds of Prey?</h3>
+                    <p class="text-xl text-white text-center max-w-4xl mx-auto mb-8 text-shadow">
+                        Birds of prey are specialized hunters that feed on mice, rodents, insects, and other animals. These magnificent birds have evolved incredible adaptations that make them some of nature's most efficient predators.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8">
+                        <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-6">🔍 Super Senses</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="text-3xl mr-4">👁️</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Powerful Eyesight</h4>
+                                    <p class="text-gray-600">Can spot prey from incredible distances - some can see 8 times better than humans!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="text-3xl mr-4">👂</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Excellent Hearing</h4>
+                                    <p class="text-gray-600">Can detect the slightest sounds of prey moving in grass or under snow.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
+                        <h3 class="heading-font text-2xl font-semibold text-gray-800 mb-6">🦅 Physical Adaptations</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="text-3xl mr-4">⚡</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Sharp Claws</h4>
+                                    <p class="text-gray-600">Razor-sharp talons designed to catch and hold struggling prey securely.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="text-3xl mr-4">🪝</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Hooked Beaks</h4>
+                                    <p class="text-gray-600">Curved beaks perfect for tearing meat and feeding efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 text-white rounded-3xl p-12">
+                    <h3 class="heading-font text-3xl font-semibold mb-8 text-center">Examples of Birds of Prey</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center p-6 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm">
+                            <div class="text-5xl mb-4">🦉</div>
+                            <h4 class="font-bold text-xl mb-2">Owls</h4>
+                            <p class="text-gray-300">Silent night hunters with exceptional hearing</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm">
+                            <div class="text-5xl mb-4">🦅</div>
+                            <h4 class="font-bold text-xl mb-2">Eagles</h4>
+                            <p class="text-gray-300">Powerful hunters with incredible eyesight</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm">
+                            <div class="text-5xl mb-4">🪶</div>
+                            <h4 class="font-bold text-xl mb-2">Vultures</h4>
+                            <p class="text-gray-300">Nature's cleanup crew, soaring scavengers</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-white bg-opacity-10 rounded-2xl backdrop-filter backdrop-blur-sm">
+                            <div class="text-5xl mb-4">🦆</div>
+                            <h4 class="font-bold text-xl mb-2">Hawks</h4>
+                            <p class="text-gray-300">Agile hunters with lightning-fast strikes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="heading-font text-5xl font-bold text-center text-gray-800 mb-16">What We've Learned</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">🌍</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Global Diversity</h3>
+                        <p class="text-gray-600 text-center">Birds are colorful species present on all continents across Earth with over 10,000 different species.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">🏗️</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Universal Traits</h3>
+                        <p class="text-gray-600 text-center">All birds have feathers, wings, beaks or bills, and lay eggs - though these vary based on their specific needs.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">✈️</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Flight Variations</h3>
+                        <p class="text-gray-600 text-center">While flying is common, some birds glide or have restricted flight movements like the ostrich.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">🛩️</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Flight Mechanics</h3>
+                        <p class="text-gray-600 text-center">Birds fly through wing flapping and their lightweight body design with centered weight distribution.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">🦅</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Specialized Hunters</h3>
+                        <p class="text-gray-600 text-center">Some birds are Birds of Prey that feed on insects, rodents, and mice with powerful adaptations.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-xl bird-card">
+                        <div class="text-5xl mb-6 text-center">🗺️</div>
+                        <h3 class="heading-font text-xl font-semibold text-gray-800 mb-4 text-center">Amazing Journeys</h3>
+                        <p class="text-gray-600 text-center">Migration is the seasonal movement of birds seeking food, water, and better weather conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="heading-font text-5xl font-bold mb-8">Test Your Knowledge</h2>
+                    <p class="text-xl text-gray-300">Complete this comprehensive quiz to test everything you've learned about birds!</p>
+                </div>
+                
+                <div id="quiz-container" class="bg-white text-gray-800 rounded-3xl shadow-2xl p-8">
+                    <!-- Quiz Header -->
+                    <div id="quiz-header" class="mb-8">
+                        <div class="flex flex-wrap justify-between items-center mb-6 gap-4">
+                            <p id="score" class="text-lg font-semibold text-gray-700">Score: 0/0</p>
+                            <div class="flex items-center gap-2">
+                                <label for="jump-input" class="text-sm font-medium text-gray-600">Jump to:</label>
+                                <input type="number" id="jump-input" class="w-16 p-2 border border-gray-300 rounded-md text-center">
+                                <button id="jump-btn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 text-sm font-semibold transition-colors">Go</button>
+                            </div>
+                            <button id="reset-score-btn" class="px-4 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200 text-sm font-semibold transition-colors">Reset Quiz</button>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-2 text-sm font-medium text-gray-600">
+                            <p>Question <span id="question-number">1</span> of <span id="total-questions">300</span></p>
+                            <p><span id="current-score">0</span> correct answers</p>
+                        </div>
+                        
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full progress-bar" style="width: 0.33%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question Area -->
+                    <div id="question-area" class="animate-fade-in-up">
+                        <h2 id="question-text" class="text-2xl font-semibold text-gray-800 mb-8 min-h-[80px] leading-relaxed"></h2>
+                        
+                        <div id="options-container" class="grid grid-cols-1 gap-4 mb-8"></div>
+                        
+                        <p id="feedback-message" class="text-center font-medium mb-6 min-h-[24px] text-lg"></p>
+                        
+                        <div id="navigation-buttons" class="flex justify-between items-center">
+                            <button id="prev-btn" class="px-6 py-3 bg-gray-500 text-white rounded-lg font-semibold hover:bg-gray-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors" disabled>← Previous</button>
+                            
+                            <div id="next-btn-container" class="opacity-0 transition-opacity duration-300">
+                                <button id="next-btn" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Screen -->
+                    <div id="result-screen" class="hidden text-center py-16">
+                        <div class="text-8xl mb-8">🏆</div>
+                        <h2 class="heading-font text-4xl font-bold text-gray-800 mb-6">Quiz Completed!</h2>
+                        <p id="final-score" class="text-2xl text-gray-600 mb-8">Your final score will appear here.</p>
+                        <div id="performance-message" class="text-lg text-gray-700 mb-8 p-6 rounded-2xl"></div>
+                        <button id="restart-btn" class="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all">Restart Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizData = [
+                {
+                    question: "How many species of birds are there approximately worldwide?",
+                    options: ["About 5,000", "More than 10,000", "Around 8,000", "Less than 7,000"],
+                    answer: "More than 10,000"
+                },
+                {
+                    question: "Which bird is mentioned as an example of a very tiny bird?",
+                    options: ["Sparrow", "Robin", "Hummingbird", "Finch"],
+                    answer: "Hummingbird"
+                },
+                {
+                    question: "Which bird is mentioned as an example of a very large bird?",
+                    options: ["Eagle", "Ostrich", "Pelican", "Swan"],
+                    answer: "Ostrich"
+                },
+                {
+                    question: "What is unique to birds and found in all bird species?",
+                    options: ["Wings", "Feathers", "Beaks", "Talons"],
+                    answer: "Feathers"
+                },
+                {
+                    question: "Which bird is known for its colorful feathers - peacock, macaw, or flamingo?",
+                    options: ["Only peacock", "Only macaw", "Only flamingo", "All three"],
+                    answer: "All three"
+                },
+                {
+                    question: "How many main types of feathers are there?",
+                    options: ["Two", "Three", "Four", "Five"],
+                    answer: "Three"
+                },
+                {
+                    question: "Which type of feathers help birds in flying?",
+                    options: ["Down feathers", "Flight feathers", "Contour feathers", "Body feathers"],
+                    answer: "Flight feathers"
+                },
+                {
+                    question: "What do contour feathers protect birds from?",
+                    options: ["Predators", "Weather", "Insects", "Disease"],
+                    answer: "Weather"
+                },
+                {
+                    question: "What are down feathers described as?",
+                    options: ["Large and stiff", "Tiny and soft", "Colorful and bright", "Sharp and pointed"],
+                    answer: "Tiny and soft"
+                },
+                {
+                    question: "What would happen if a bird did not have feathers? (Critical thinking question)",
+                    options: ["They would fly faster", "They couldn't stay warm or fly properly", "They would be more colorful", "Nothing would change"],
+                    answer: "They couldn't stay warm or fly properly"
+                },
+                {
+                    question: "What are birds called that cannot fly?",
+                    options: ["Ground birds", "Flightless birds", "Walking birds", "Land birds"],
+                    answer: "Flightless birds"
+                },
+                {
+                    question: "How do penguins use their wings?",
+                    options: ["For flying", "As flippers to glide through water", "For display only", "For balance while walking"],
+                    answer: "As flippers to glide through water"
+                },
+                {
+                    question: "Which of the following is NOT mentioned as a flightless bird?",
+                    options: ["Ostrich", "Emu", "Kiwi", "Sparrow"],
+                    answer: "Sparrow"
+                },
+                {
+                    question: "What type of wings do eagles and falcons have?",
+                    options: ["Round wings", "Sharp-tipped wings", "Flat wings", "Curved wings"],
+                    answer: "Sharp-tipped wings"
+                },
+                {
+                    question: "Why do eagles and falcons have sharp-tipped wings?",
+                    options: ["For swimming", "For speed and flying high", "For digging", "For climbing"],
+                    answer: "For speed and flying high"
+                },
+                {
+                    question: "What special ability do hummingbird wings provide?",
+                    options: ["Fast flying", "Hovering for long time", "Swimming", "Gliding"],
+                    answer: "Hovering for long time"
+                },
+                {
+                    question: "What can the shape and size of a beak tell us about a bird?",
+                    options: ["Its age", "What it eats and what type of bird it is", "Where it lives", "How fast it flies"],
+                    answer: "What it eats and what type of bird it is"
+                },
+                {
+                    question: "What type of beak do sparrows and goldfinches have?",
+                    options: ["Flat beaks", "Cone-shaped beaks", "Curved beaks", "Long thin beaks"],
+                    answer: "Cone-shaped beaks"
+                },
+                {
+                    question: "What do birds with cone-shaped beaks primarily eat?",
+                    options: ["Insects", "Fish", "Seeds of flowers and plants", "Nectar"],
+                    answer: "Seeds of flowers and plants"
+                },
+                {
+                    question: "What type of beak is described as long, thin and slender?",
+                    options: ["Cone-shaped beaks", "Probing or nectar sucking beaks", "Sharp and curved beaks", "Flat beaks"],
+                    answer: "Probing or nectar sucking beaks"
+                },
+                {
+                    question: "What are probing or nectar sucking beaks specially modified to do?",
+                    options: ["Crack seeds", "Tear meat", "Suck nectar from flowers", "Catch fish"],
+                    answer: "Suck nectar from flowers"
+                },
+                {
+                    question: "What are sharp and curved beaks compared to?",
+                    options: ["A spoon", "A hook", "A knife", "A needle"],
+                    answer: "A hook"
+                },
+                {
+                    question: "Which birds have sharp and curved beaks?",
+                    options: ["Sparrows and finches", "Ducks and geese", "Eagles and vultures", "Pigeons and doves"],
+                    answer: "Eagles and vultures"
+                },
+                {
+                    question: "What do carnivorous birds with sharp and curved beaks feed on?",
+                    options: ["Seeds and grains", "Nectar", "Prey and scavengers", "Fruits"],
+                    answer: "Prey and scavengers"
+                },
+                {
+                    question: "What type of beak do doves and pigeons have?",
+                    options: ["Sharp and curved", "Flat", "Short and slender", "Long and thin"],
+                    answer: "Short and slender"
+                },
+                {
+                    question: "What do birds with short and slender beaks feed on?",
+                    options: ["Insects only", "Seeds and fruits of plants", "Fish only", "Nectar only"],
+                    answer: "Seeds and fruits of plants"
+                },
+                {
+                    question: "Which birds have flat beaks?",
+                    options: ["Eagles", "Ducks", "Sparrows", "Hummingbirds"],
+                    answer: "Ducks"
+                },
+                {
+                    question: "What do birds with flat beaks use them for?",
+                    options: ["Cracking seeds", "Tearing meat", "Catching food from ponds and rivers", "Sucking nectar"],
+                    answer: "Catching food from ponds and rivers"
+                },
+                {
+                    question: "What special system do some birds like flamingos have in their beaks?",
+                    options: ["Grinding system", "Filter system", "Cutting system", "Storing system"],
+                    answer: "Filter system"
+                },
+                {
+                    question: "What is the filter system in flamingo beaks used for?",
+                    options: ["To store water", "To remove water and eat only organisms", "To make sounds", "To breathe"],
+                    answer: "To remove water and eat only organisms"
+                },
+                {
+                    question: "What are bird feet also called?",
+                    options: ["Paws", "Claws or talons", "Hooves", "Flippers"],
+                    answer: "Claws or talons"
+                },
+                {
+                    question: "What type of claws do birds of prey have?",
+                    options: ["Flat and wide", "Sharp and strong", "Small and weak", "Webbed"],
+                    answer: "Sharp and strong"
+                },
+                {
+                    question: "What do birds of prey use their sharp and strong claws for?",
+                    options: ["Swimming", "Climbing trees", "Catching and holding prey", "Building nests"],
+                    answer: "Catching and holding prey"
+                },
+                {
+                    question: "Which birds are mentioned as examples of birds of prey with strong claws?",
+                    options: ["Sparrow and robin", "Eagle and vulture", "Duck and goose", "Dove and pigeon"],
+                    answer: "Eagle and vulture"
+                },
+                {
+                    question: "How many toes do perching birds have pointing backwards?",
+                    options: ["None", "One", "Two", "Three"],
+                    answer: "One"
+                },
+                {
+                    question: "Why do perching birds have one toe pointing backwards?",
+                    options: ["For swimming", "To perch comfortably on tree branches", "For digging", "For catching prey"],
+                    answer: "To perch comfortably on tree branches"
+                },
+                {
+                    question: "Which bird is given as an example of a perching bird?",
+                    options: ["Eagle", "Duck", "Sparrow", "Penguin"],
+                    answer: "Sparrow"
+                },
+                {
+                    question: "What type of feet do swimming birds like ducks and flamingos have?",
+                    options: ["Sharp claws", "Wide, webbed feet", "Long thin feet", "Small round feet"],
+                    answer: "Wide, webbed feet"
+                },
+                {
+                    question: "What are the digits of swimming birds connected by?",
+                    options: ["Bones", "Skin", "Feathers", "Muscles"],
+                    answer: "Skin"
+                },
+                {
+                    question: "How do webbed feet help swimming birds?",
+                    options: ["They help in flying", "They help swim and wade through water", "They help catch prey", "They help build nests"],
+                    answer: "They help swim and wade through water"
+                },
+                {
+                    question: "How many toes do climbing birds have pointing forward?",
+                    options: ["One", "Two", "Three", "Four"],
+                    answer: "Two"
+                },
+                {
+                    question: "How many toes do climbing birds have pointing backwards?",
+                    options: ["One", "Two", "Three", "Four"],
+                    answer: "Two"
+                },
+                {
+                    question: "What does the toe arrangement of climbing birds help them do?",
+                    options: ["Swim faster", "Move forward while climbing trees", "Fly higher", "Dig deeper"],
+                    answer: "Move forward while climbing trees"
+                },
+                {
+                    question: "Which birds are mentioned as examples of climbing birds?",
+                    options: ["Eagle and hawk", "Woodpecker and parrot", "Duck and swan", "Sparrow and robin"],
+                    answer: "Woodpecker and parrot"
+                },
+                {
+                    question: "What do climbing birds catch on trees?",
+                    options: ["Fruits", "Insects", "Leaves", "Bark"],
+                    answer: "Insects"
+                },
+                {
+                    question: "Do wading birds swim in water?",
+                    options: ["Yes, always", "No, they wade through it slowly", "Only sometimes", "Only when hunting"],
+                    answer: "No, they wade through it slowly"
+                },
+                {
+                    question: "Which birds are mentioned as examples of wading birds?",
+                    options: ["Duck and goose", "Eagle and hawk", "Heron and crane", "Sparrow and robin"],
+                    answer: "Heron and crane"
+                },
+                {
+                    question: "What type of legs do wading birds have?",
+                    options: ["Short and thick", "Long and thin", "Medium and webbed", "Small and curved"],
+                    answer: "Long and thin"
+                },
+                {
+                    question: "What type of feet do wading birds have?",
+                    options: ["Webbed feet", "Sharp claws", "Strong spread feet", "Small round feet"],
+                    answer: "Strong spread feet"
+                },
+                {
+                    question: "Do all birds lay eggs?",
+                    options: ["No, only some birds", "Yes, all birds lay eggs", "Only flying birds", "Only large birds"],
+                    answer: "Yes, all birds lay eggs"
+                },
+                {
+                    question: "What colors can bird eggs be?",
+                    options: ["Only white", "White or colored", "Only brown", "Only blue"],
+                    answer: "White or colored"
+                },
+                {
+                    question: "Can bird eggs have patterns on them?",
+                    options: ["No, never", "Yes, some may be spotted", "Only large eggs", "Only small eggs"],
+                    answer: "Yes, some may be spotted"
+                },
+                {
+                    question: "What surrounds a bird egg on the outside?",
+                    options: ["Soft skin", "Hard shell", "Feathers", "Fur"],
+                    answer: "Hard shell"
+                },
+                {
+                    question: "What is inside a bird egg?",
+                    options: ["Only water", "Yellow yolk and white protein", "Only protein", "Only yolk"],
+                    answer: "Yellow yolk and white protein"
+                },
+                {
+                    question: "Which bird lays the biggest eggs in the bird world?",
+                    options: ["Eagle", "Ostrich", "Swan", "Pelican"],
+                    answer: "Ostrich"
+                },
+                {
+                    question: "What do birds flap to help them fly?",
+                    options: ["Their tails", "Their wings", "Their feet", "Their heads"],
+                    answer: "Their wings"
+                },
+                {
+                    question: "When birds flap their wings, what happens to the air above the wings?",
+                    options: ["It moves slower", "It moves faster", "It stops moving", "It becomes thicker"],
+                    answer: "It moves faster"
+                },
+                {
+                    question: "After flapping, what do birds do with their wings to continue flying?",
+                    options: ["Fold them", "Spread them in a strong straight line", "Twist them", "Close them"],
+                    answer: "Spread them in a strong straight line"
+                },
+                {
+                    question: "Besides wings, what other factors are important for bird flight?",
+                    options: ["Color and size", "Weight and shape of the body", "Beak type", "Foot shape"],
+                    answer: "Weight and shape of the body"
+                },
+                {
+                    question: "How are birds generally built in terms of weight?",
+                    options: ["Heavy", "Lightweight", "Medium weight", "Variable weight"],
+                    answer: "Lightweight"
+                },
+                {
+                    question: "Where is most of a bird's weight located?",
+                    options: ["In the wings", "In the tail", "In the center of the body", "In the head"],
+                    answer: "In the center of the body"
+                },
+                {
+                    question: "What parts of the bird's body are lighter than the center?",
+                    options: ["Head and tail", "Wings and feathers", "Legs and feet", "Beak and eyes"],
+                    answer: "Wings and feathers"
+                },
+                {
+                    question: "What is migration in birds?",
+                    options: ["Daily movement", "Seasonal movement from one place to another", "Movement within the same area", "Random movement"],
+                    answer: "Seasonal movement from one place to another"
+                },
+                {
+                    question: "What are some reasons birds migrate? (Choose the most complete answer)",
+                    options: ["Only for food", "Only for weather", "For food, water, weather, and temperature", "Only for water"],
+                    answer: "For food, water, weather, and temperature"
+                },
+                {
+                    question: "How far do many birds migrate?",
+                    options: ["Short distances", "Very long distances", "Only within the same country", "Only between cities"],
+                    answer: "Very long distances"
+                },
+                {
+                    question: "How long can migratory journeys take?",
+                    options: ["A few hours", "Several days", "Only one day", "A few minutes"],
+                    answer: "Several days"
+                },
+                {
+                    question: "What do migrating birds search for during their journey?",
+                    options: ["Other birds", "The preferred place", "New species", "Predators"],
+                    answer: "The preferred place"
+                },
+                {
+                    question: "What are birds of prey?",
+                    options: ["Birds that build nests", "Birds that hunt mice, rodents and insects", "Birds that migrate", "Birds that swim"],
+                    answer: "Birds that hunt mice, rodents and insects"
+                },
+                {
+                    question: "What special sight ability do birds of prey have?",
+                    options: ["Color blindness", "Powerful eyesight", "Night blindness", "Poor vision"],
+                    answer: "Powerful eyesight"
+                },
+                {
+                    question: "What type of claws do birds of prey have?",
+                    options: ["Blunt claws", "Sharp claws", "Webbed feet", "Flat feet"],
+                    answer: "Sharp claws"
+                },
+                {
+                    question: "Which of the following is NOT mentioned as an example of birds of prey?",
+                    options: ["Owls", "Vultures", "Eagles", "Ducks"],
+                    answer: "Ducks"
+                },
+                {
+                    question: "Which of the following IS mentioned as an example of birds of prey?",
+                    options: ["Sparrows", "Hawks", "Doves", "Pigeons"],
+                    answer: "Hawks"
+                },
+                {
+                    question: "What do birds of prey use their powerful eyesight for?",
+                    options: ["Finding nests", "Catching their prey", "Avoiding predators", "Building homes"],
+                    answer: "Catching their prey"
+                },
+                {
+                    question: "According to the chapter, on which continents are birds present?",
+                    options: ["Only North America", "Only Europe and Asia", "All continents across Earth", "Only warm continents"],
+                    answer: "All continents across Earth"
+                },
+                {
+                    question: "What makes birds a beautiful addition to our world?",
+                    options: ["Only their flight", "Their vivid colors and different sounds", "Only their size", "Only their nests"],
+                    answer: "Their vivid colors and different sounds"
+                },
+                {
+                    question: "What do all birds have in common? (Choose the most complete answer)",
+                    options: ["Only feathers", "Only wings", "Feathers, wings, beaks and they lay eggs", "Only beaks"],
+                    answer: "Feathers, wings, beaks and they lay eggs"
+                },
+                {
+                    question: "Do the traits of birds vary between different species?",
+                    options: ["No, they are all the same", "Yes, they vary depending on usage", "Only slightly", "Only in color"],
+                    answer: "Yes, they vary depending on usage"
+                },
+                {
+                    question: "Is flying common to all bird types?",
+                    options: ["Yes, all birds fly the same way", "No, some birds glide or have restricted flight movements", "Only large birds fly", "Only small birds fly"],
+                    answer: "No, some birds glide or have restricted flight movements"
+                },
+                {
+                    question: "What example is given of a bird with restricted flight movements?",
+                    options: ["Eagle", "Sparrow", "Ostrich", "Duck"],
+                    answer: "Ostrich"
+                },
+                {
+                    question: "According to the chapter, what enables birds to fly?",
+                    options: ["Only wing flapping", "Wing flapping and lightweight bodies", "Only body weight", "Only feathers"],
+                    answer: "Wing flapping and lightweight bodies"
+                },
+                {
+                    question: "What do birds of prey feed on? (Choose the most complete answer)",
+                    options: ["Only insects", "Only rodents", "Insects, rodents and mice", "Only plants"],
+                    answer: "Insects, rodents and mice"
+                },
+                {
+                    question: "Why do migratory birds travel long distances?",
+                    options: ["For fun", "In search of food, water, better weather", "To find other birds", "To build new nests"],
+                    answer: "In search of food, water, better weather"
+                },
+                {
+                    question: "How long can migratory birds travel to reach their preferred location?",
+                    options: ["Only a few minutes", "Several hours", "Several days or weeks", "Only one hour"],
+                    answer: "Several days or weeks"
+                },
+                {
+                    question: "What part of a bird is described as being at the top of the head?",
+                    options: ["Beak", "Crown", "Eye", "Throat"],
+                    answer: "Crown"
+                },
+                {
+                    question: "What part of a bird is used for eating and feeding?",
+                    options: ["Crown", "Wing", "Beak", "Tail"],
+                    answer: "Beak"
+                },
+                {
+                    question: "What part of a bird is used for vision and hunting?",
+                    options: ["Beak", "Eye", "Wing", "Feet"],
+                    answer: "Eye"
+                },
+                {
+                    question: "What part of a bird is used for singing and calls?",
+                    options: ["Beak", "Crown", "Throat", "Wing"],
+                    answer: "Throat"
+                },
+                {
+                    question: "What part of a bird provides upper body support?",
+                    options: ["Breast", "Back", "Wing", "Tail"],
+                    answer: "Back"
+                },
+                {
+                    question: "What part of a bird is where flight muscles attach?",
+                    options: ["Back", "Breast", "Wing", "Tail"],
+                    answer: "Breast"
+                },
+                {
+                    question: "What parts of a bird are used for flight and balance?",
+                    options: ["Feet", "Wings", "Beak", "Crown"],
+                    answer: "Wings"
+                },
+                {
+                    question: "What parts of a bird are used for perching and walking?",
+                    options: ["Wings", "Beak", "Feet", "Tail"],
+                    answer: "Feet"
+                },
+                {
+                    question: "Where are flight feathers found on a bird?",
+                    options: ["Only on wings", "Only on tail", "On wings and tail", "All over the body"],
+                    answer: "On wings and tail"
+                },
+                {
+                    question: "How are flight feathers described in terms of size?",
+                    options: ["Small", "Medium", "Large", "Tiny"],
+                    answer: "Large"
+                },
+                {
+                    question: "What do down feathers provide to birds?",
+                    options: ["Flight ability", "Protection from weather", "Fluff", "Color"],
+                    answer: "Fluff"
+                },
+                {
+                    question: "In the critical thinking question about feathers, what would be affected if birds had no feathers?",
+                    options: ["Only their appearance", "Their ability to fly, stay warm, and survive", "Only their color", "Nothing important"],
+                    answer: "Their ability to fly, stay warm, and survive"
+                },
+                {
+                    question: "What do penguins use their wing-flippers for?",
+                    options: ["Flying through air", "Gliding through water", "Walking on land", "Building nests"],
+                    answer: "Gliding through water"
+                },
+                {
+                    question: "Why do eagles and falcons need sharp-tipped wings?",
+                    options: ["For swimming", "For speed and flying high in the sky", "For walking", "For digging"],
+                    answer: "For speed and flying high in the sky"
+                },
+                {
+                    question: "What special flying ability do hummingbirds have?",
+                    options: ["Flying very fast", "Hovering for a long time", "Flying very high", "Flying underwater"],
+                    answer: "Hovering for a long time"
+                },
+                {
+                    question: "Besides eating, what other functions do beaks perform?",
+                    options: ["Only singing", "Sucking nectar and pecking wood", "Only breathing", "Only preening"],
+                    answer: "Sucking nectar and pecking wood"
+                },
+                {
+                    question: "What can you determine about a bird by looking at its beak shape and size?",
+                    options: ["Its age and gender", "What it eats and what type it is", "Where it was born", "How old it is"],
+                    answer: "What it eats and what type it is"
+                },
+                {
+                    question: "What do cone-shaped beaks help birds do?",
+                    options: ["Swim", "Feed on seeds", "Catch fish", "Suck nectar"],
+                    answer: "Feed on seeds"
+                },
+                {
+                    question: "What makes probing beaks special for nectar-feeding?",
+                    options: ["They are very short", "They are long, thin and slender", "They are very wide", "They are curved like hooks"],
+                    answer: "They are long, thin and slender"
+                },
+                {
+                    question: "How do probing beaks help birds get food?",
+                    options: ["They crack seeds", "They help probe food and extract it", "They tear meat", "They filter water"],
+                    answer: "They help probe food and extract it"
+                },
+                {
+                    question: "Why are sharp and curved beaks described as 'extremely sharp'?",
+                    options: ["To build nests", "To tear apart prey", "To crack nuts", "To dig holes"],
+                    answer: "To tear apart prey"
+                },
+                {
+                    question: "What type of birds have sharp and curved beaks?",
+                    options: ["Seed-eating birds", "Carnivorous birds", "Nectar-eating birds", "Fish-eating birds"],
+                    answer: "Carnivorous birds"
+                },
+                {
+                    question: "How do short and slender beaks differ from cone-shaped beaks?",
+                    options: ["They are longer", "They are slightly flat and not conical", "They are sharper", "They are more curved"],
+                    answer: "They are slightly flat and not conical"
+                },
+                {
+                    question: "Some parrots have beaks that are described as what?",
+                    options: ["Very long", "Slightly curved but short", "Completely flat", "Extremely sharp"],
+                    answer: "Slightly curved but short"
+                },
+                {
+                    question: "What special feeding method do flamingos use with their flat beaks?",
+                    options: ["Cracking seeds", "Specialized filter system", "Tearing meat", "Probing flowers"],
+                    answer: "Specialized filter system"
+                },
+                {
+                    question: "What does the filter system in flamingo beaks remove?",
+                    options: ["Seeds", "Meat", "Water", "Nectar"],
+                    answer: "Water"
+                },
+                {
+                    question: "After filtering, what do flamingos eat?",
+                    options: ["Water", "Only organisms", "Seeds", "Leaves"],
+                    answer: "Only organisms"
+                },
+                {
+                    question: "Why do birds of prey need sharp and strong claws?",
+                    options: ["For swimming", "To catch and hold prey", "For building nests", "For climbing trees"],
+                    answer: "To catch and hold prey"
+                },
+                {
+                    question: "What do birds of prey do with their prey after catching it?",
+                    options: ["Eat it immediately", "Pick it up and fly to quieter destinations", "Share it with others", "Store it for winter"],
+                    answer: "Pick it up and fly to quieter destinations"
+                },
+                {
+                    question: "What makes perching bird toes special?",
+                    options: ["They are webbed", "They are all pointing forward", "They are independent but flexible", "They are very small"],
+                    answer: "They are independent but flexible"
+                },
+                {
+                    question: "How does having one toe pointing backwards help perching birds?",
+                    options: ["It helps them swim", "It helps them perch comfortably on branches", "It helps them catch prey", "It helps them dig"],
+                    answer: "It helps them perch comfortably on branches"
+                },
+                {
+                    question: "What connects the digits in swimming birds' webbed feet?",
+                    options: ["Bones", "Skin attachments", "Feathers", "Muscles"],
+                    answer: "Skin attachments"
+                },
+                {
+                    question: "How do webbed feet help ducks and flamingos?",
+                    options: ["They help fly better", "They help swim and wade easily through waters", "They help catch prey", "They help climb trees"],
+                    answer: "They help swim and wade easily through waters"
+                },
+                {
+                    question: "What advantage does the 2-forward, 2-backward toe arrangement give climbing birds?",
+                    options: ["Better swimming", "Ability to move forward while climbing trees", "Better flying", "Faster running"],
+                    answer: "Ability to move forward while climbing trees"
+                },
+                {
+                    question: "What do climbing birds like woodpeckers and parrots catch on trees?",
+                    options: ["Fruits", "Any insects on trees", "Leaves", "Other birds"],
+                    answer: "Any insects on trees"
+                },
+                {
+                    question: "How do wading birds move through water?",
+                    options: ["They swim quickly", "They wade through slowly", "They dive deep", "They float on top"],
+                    answer: "They wade through slowly"
+                },
+                {
+                    question: "Why do wading birds need long, thin legs?",
+                    options: ["For flying", "For wading through water", "For catching prey", "For building nests"],
+                    answer: "For wading through water"
+                },
+                {
+                    question: "What type of feet do wading birds need for stability?",
+                    options: ["Webbed feet", "Sharp claws", "Strong spread feet", "Small round feet"],
+                    answer: "Strong spread feet"
+                },
+                {
+                    question: "What surrounds bird eggs to protect them?",
+                    options: ["Soft membrane", "Hard shell outside", "Feathers", "Plastic coating"],
+                    answer: "Hard shell outside"
+                },
+                {
+                    question: "What are the two main contents inside a bird egg?",
+                    options: ["Water and air", "Yellow yolk and white protein", "Only protein", "Seeds and water"],
+                    answer: "Yellow yolk and white protein"
+                },
+                {
+                    question: "Why is the ostrich egg special?",
+                    options: ["It's the smallest", "It's the biggest in the bird world", "It's the most colorful", "It's the hardest"],
+                    answer: "It's the biggest in the bird world"
+                },
+                {
+                    question: "When birds look like they're flying with wings, what other factors also help them?",
+                    options: ["Only wing movement", "Other factors like weight and body shape", "Only tail movement", "Only leg movement"],
+                    answer: "Other factors like weight and body shape"
+                },
+                {
+                    question: "What creates lift when birds flap their wings?",
+                    options: ["Air moving slower above wings", "Air moving faster above wings", "Air stopping completely", "Air moving sideways"],
+                    answer: "Air moving faster above wings"
+                },
+                {
+                    question: "After creating lift by flapping, what do birds do to continue soaring?",
+                    options: ["Keep flapping rapidly", "Spread wings in strong straight line", "Fold their wings", "Move their tail"],
+                    answer: "Spread wings in strong straight line"
+                },
+                {
+                    question: "Where is most of the bird's body weight concentrated and why is this important for flight?",
+                    options: ["In the wings for balance", "In the center for proper flight balance", "In the tail for steering", "In the head for direction"],
+                    answer: "In the center for proper flight balance"
+                },
+                {
+                    question: "Why are the sides of a bird's body (wings and feathers) lighter than the center?",
+                    options: ["To save energy", "To create proper weight distribution for flight", "To look more beautiful", "To make sounds"],
+                    answer: "To create proper weight distribution for flight"
+                },
+                {
+                    question: "What defines migration in birds?",
+                    options: ["Daily hunting trips", "Seasonal movement from one place to another", "Moving to higher trees", "Building new nests"],
+                    answer: "Seasonal movement from one place to another"
+                },
+                {
+                    question: "What is the main driving factor behind bird migration?",
+                    options: ["Boredom", "Availability of food, water, weather, temperature", "Following other animals", "Exploring new places"],
+                    answer: "Availability of food, water, weather, temperature"
+                },
+                {
+                    question: "How do migratory distances compare to everyday bird movement?",
+                    options: ["They are about the same", "Migration involves very long distances for several days", "Migration is shorter", "Migration only happens at night"],
+                    answer: "Migration involves very long distances for several days"
+                },
+                {
+                    question: "What are migratory birds searching for during their long journey?",
+                    options: ["Other birds to join", "The preferred place with better conditions", "Places to rest", "New types of food only"],
+                    answer: "The preferred place with better conditions"
+                },
+                {
+                    question: "What makes birds of prey different from other birds in terms of diet?",
+                    options: ["They only eat plants", "They hunt mice, rodents and insects", "They only eat fish", "They only eat seeds"],
+                    answer: "They hunt mice, rodents and insects"
+                },
+                {
+                    question: "What two main physical adaptations help birds of prey hunt successfully?",
+                    options: ["Colorful feathers and long legs", "Powerful eyesight and sharp claws", "Large wings and webbed feet", "Long beaks and small bodies"],
+                    answer: "Powerful eyesight and sharp claws"
+                },
+                {
+                    question: "How do birds of prey use their powerful eyesight?",
+                    options: ["To find nesting materials", "To catch their prey", "To avoid other birds", "To find water"],
+                    answer: "To catch their prey"
+                },
+                {
+                    question: "How do birds of prey use their sharp claws?",
+                    options: ["For climbing only", "To catch their prey", "For swimming", "For building nests"],
+                    answer: "To catch their prey"
+                },
+                {
+                    question: "Which of these birds is mentioned as an example of birds of prey that hunt rodents and insects?",
+                    options: ["Sparrow", "Duck", "Owl", "Pigeon"],
+                    answer: "Owl"
+                },
+                {
+                    question: "According to the text, birds make the world beautiful in what ways?",
+                    options: ["Only through their flight", "Through vivid colors and different sounds", "Only through their nests", "Only through their size"],
+                    answer: "Through vivid colors and different sounds"
+                },
+                {
+                    question: "What is stated about the diversity of bird species?",
+                    options: ["There are only a few hundred species", "There are more than 10,000 species", "There are exactly 5,000 species", "Nobody knows how many species exist"],
+                    answer: "There are more than 10,000 species"
+                },
+                {
+                    question: "What range of sizes do birds show, according to the examples given?",
+                    options: ["All birds are the same size", "From tiny hummingbirds to large ostriches", "Only medium-sized birds exist", "Only small birds exist"],
+                    answer: "From tiny hummingbirds to large ostriches"
+                },
+                {
+                    question: "Where can birds be found on Earth?",
+                    options: ["Only in warm places", "Only in cold places", "All across the world", "Only near water"],
+                    answer: "All across the world"
+                },
+                {
+                    question: "What four universal characteristics do all birds share?",
+                    options: ["Wings, legs, eyes, beak", "Feathers, wings, beaks/bills, lay eggs", "Colors, sounds, flight, nests", "Size, shape, speed, strength"],
+                    answer: "Feathers, wings, beaks/bills, lay eggs"
+                },
+                {
+                    question: "Do these universal bird characteristics vary between species?",
+                    options: ["No, they are identical in all birds", "Yes, they vary depending on their usage", "Only colors vary", "Only size varies"],
+                    answer: "Yes, they vary depending on their usage"
+                },
+                {
+                    question: "Is flight ability the same across all bird species?",
+                    options: ["Yes, all birds fly identically", "No, some glide or have restricted flight movements", "Only large birds can fly", "Only colorful birds can fly"],
+                    answer: "No, some glide or have restricted flight movements"
+                },
+                {
+                    question: "What specific example is given of a bird with restricted flight movements?",
+                    options: ["Eagle - can't fly high", "Ostrich - cannot fly", "Duck - can only glide", "Sparrow - flies slowly"],
+                    answer: "Ostrich - cannot fly"
+                },
+                {
+                    question: "What two factors work together to enable bird flight?",
+                    options: ["Color and size", "Flapping wings and lightweight bodies", "Sharp beaks and strong feet", "Good eyesight and hearing"],
+                    answer: "Flapping wings and lightweight bodies"
+                },
+                {
+                    question: "What do birds of prey specialize in eating?",
+                    options: ["Only plants and seeds", "Only fish and water animals", "Insects, rodents, and mice", "Only fruits and nectar"],
+                    answer: "Insects, rodents, and mice"
+                },
+                {
+                    question: "What drives birds to make seasonal migrations?",
+                    options: ["Just instinct with no purpose", "Search for food, water, weather, and temperature conditions", "Following other animal migrations", "Avoiding humans"],
+                    answer: "Search for food, water, weather, and temperature conditions"
+                },
+                {
+                    question: "How long and far do migratory birds travel?",
+                    options: ["Short distances in a few hours", "Long distances often for days to reach preferred locations", "Only at night for safety", "Only within the same country"],
+                    answer: "Long distances often for days to reach preferred locations"
+                },
+                {
+                    question: "Fill in the blank: There are over _____ species of birds across all continents.",
+                    options: ["5,000", "10,000", "15,000", "20,000"],
+                    answer: "10,000"
+                },
+                {
+                    question: "Fill in the blank: Feathers in peacock are more _____ than peahen.",
+                    options: ["colorful", "large", "numerous", "beautiful"],
+                    answer: "colorful"
+                },
+                {
+                    question: "Fill in the blank: Penguins have wings in the shape of _____ to glide through water.",
+                    options: ["sails", "flippers", "paddles", "fins"],
+                    answer: "flippers"
+                },
+                {
+                    question: "Fill in the blank: _____ and _____ of the body are important for the bird to fly.",
+                    options: ["Color and size", "Weight and shape", "Length and width", "Strength and speed"],
+                    answer: "Weight and shape"
+                },
+                {
+                    question: "Fill in the blank: Birds of Prey feed on _____.",
+                    options: ["seeds and grains", "mice, rodents and insects", "fruits and nectar", "fish and water plants"],
+                    answer: "mice, rodents and insects"
+                },
+                {
+                    question: "Fill in the blank: Ostrich has _____ movement to fly.",
+                    options: ["fast", "restricted", "smooth", "circular"],
+                    answer: "restricted"
+                },
+                {
+                    question: "True or False: All birds fly.",
+                    options: ["True", "False"],
+                    answer: "False"
+                },
+                {
+                    question: "True or False: Wings are the only important factor that helps a bird to fly.",
+                    options: ["True", "False"],
+                    answer: "False"
+                },
+                {
+                    question: "True or False: Feathers are colorful and often used to attract mates of different birds.",
+                    options: ["True", "False"],
+                    answer: "True"
+                },
+                {
+                    question: "True or False: Woodpecker has blunt beaks and is therefore not able to chip wood of trees.",
+                    options: ["True", "False"],
+                    answer: "False"
+                },
+                {
+                    question: "True or False: Birds of Prey eat food grains and plant particles.",
+                    options: ["True", "False"],
+                    answer: "False"
+                },
+                {
+                    question: "True or False: Ostrich has restricted movements to fly.",
+                    options: ["True", "False"],
+                    answer: "True"
+                },
+                {
+                    question: "True or False: Eagle has sharp-tipped wings to help with speed and soar high altitudes.",
+                    options: ["True", "False"],
+                    answer: "True"
+                },
+                {
+                    question: "True or False: All birds lay eggs.",
+                    options: ["True", "False"],
+                    answer: "True"
+                },
+                {
+                    question: "Match: Woodpecker has what type of beak?",
+                    options: ["Hooked, sharp beak", "Sharp long beak", "Curved beak", "Flat beak"],
+                    answer: "Sharp long beak"
+                },
+                {
+                    question: "Match: Geese has what type of beak?",
+                    options: ["Sharp long beak", "Flat beak", "Curved beak", "Hooked, sharp beak"],
+                    answer: "Flat beak"
+                },
+                {
+                    question: "Match: Eagle has what type of beak?",
+                    options: ["Flat beak", "Hooked, sharp beak", "Sharp long beak", "Curved beak"],
+                    answer: "Hooked, sharp beak"
+                },
+                {
+                    question: "Match: Parrot has what type of beak?",
+                    options: ["Sharp long beak", "Flat beak", "Curved beak", "Hooked, sharp beak"],
+                    answer: "Curved beak"
+                },
+                {
+                    question: "Match: Penguin has wings in the form of what?",
+                    options: ["Sharp long beak", "Curved beak", "Flippers", "Hooked, sharp beak"],
+                    answer: "Flippers"
+                },
+                {
+                    question: "Match: Weight of the bird is located where?",
+                    options: ["In the wings", "In the centre of the bird's body", "In the tail", "In the head"],
+                    answer: "In the centre of the bird's body"
+                },
+                {
+                    question: "Short Answer: What is Migration?",
+                    options: ["Daily movement of birds", "Seasonal movement of birds from one place to another", "Random flying patterns", "Building nests in new places"],
+                    answer: "Seasonal movement of birds from one place to another"
+                },
+                {
+                    question: "Short Answer: Why does a duck have a flat beak?",
+                    options: ["For cracking seeds", "To catch food from ponds and rivers", "For tearing meat", "For sucking nectar"],
+                    answer: "To catch food from ponds and rivers"
+                },
+                {
+                    question: "Short Answer: Peacock is more attractive than peahen. Why?",
+                    options: ["Peacock is larger", "Peacock has more colorful feathers", "Peacock can fly better", "Peacock is stronger"],
+                    answer: "Peacock has more colorful feathers"
+                },
+                {
+                    question: "Short Answer: Name at least two modifications of wings in birds.",
+                    options: ["Sharp-tipped for speed and hovering for hummingbirds", "Only sharp-tipped", "Only for hovering", "Only for gliding"],
+                    answer: "Sharp-tipped for speed and hovering for hummingbirds"
+                },
+                {
+                    question: "Short Answer: Where is most of the bird's weight located?",
+                    options: ["In the wings", "In the centre of the body", "In the tail", "In the legs"],
+                    answer: "In the centre of the body"
+                },
+                {
+                    question: "Short Answer: Which are the two characteristics of Birds of Prey?",
+                    options: ["Powerful eyesight and sharp claws", "Colorful feathers and long legs", "Large wings and webbed feet", "Small size and speed"],
+                    answer: "Powerful eyesight and sharp claws"
+                },
+                {
+                    question: "Long Answer: What factors are important for a bird to fly?",
+                    options: ["Only wing flapping", "Wing flapping and lightweight body with weight in center", "Only body weight", "Only feather type"],
+                    answer: "Wing flapping and lightweight body with weight in center"
+                },
+                {
+                    question: "Long Answer: What are the various modifications of beaks and bills in different bird species?",
+                    options: ["Only cone-shaped", "Cone-shaped, probing, sharp curved, short slender, and flat", "Only sharp and curved", "Only flat beaks"],
+                    answer: "Cone-shaped, probing, sharp curved, short slender, and flat"
+                },
+                {
+                    question: "Long Answer: What are the different functions of feathers in a bird?",
+                    options: ["Only for flying", "Keep body warm and help in flying", "Only for appearance", "Only for protection"],
+                    answer: "Keep body warm and help in flying"
+                },
+                {
+                    question: "Long Answer: Why do birds migrate?",
+                    options: ["Only for food", "For availability of food, water, weather, and temperature", "Only to escape predators", "Only for breeding"],
+                    answer: "For availability of food, water, weather, and temperature"
+                },
+                {
+                    question: "Activity Question: What is the use of bird feeders?",
+                    options: ["Decoration only", "To provide water and food for birds", "To catch birds", "To scare birds away"],
+                    answer: "To provide water and food for birds"
+                },
+                {
+                    question: "Life Skill: Why should we keep water for birds during summers?",
+                    options: ["For decoration", "Birds need water to drink and keep cool during hot weather", "To attract more birds", "Birds use it for building nests"],
+                    answer: "Birds need water to drink and keep cool during hot weather"
+                },
+                {
+                    question: "General Knowledge: Great Hornbill is the state bird of which Indian state?",
+                    options: ["Bihar", "Arunachal Pradesh", "Kerala", "Rajasthan"],
+                    answer: "Arunachal Pradesh"
+                },
+                {
+                    question: "General Knowledge: House Sparrow is the state bird of which Indian state?",
+                    options: ["Arunachal Pradesh", "Bihar", "Maharashtra", "Gujarat"],
+                    answer: "Bihar"
+                },
+                {
+                    question: "According to the text, what makes peacocks, macaws, and flamingos special?",
+                    options: ["Their flying ability", "Their colorful feathers", "Their size", "Their songs"],
+                    answer: "Their colorful feathers"
+                },
+                {
+                    question: "What happens when birds flap their wings according to the flight explanation?",
+                    options: ["Air moves slower above wings", "Air moves faster above wings", "Air stops moving", "Air moves downward only"],
+                    answer: "Air moves faster above wings"
+                },
+                {
+                    question: "After flapping their wings, what do birds do to continue flying and soaring?",
+                    options: ["Continue flapping rapidly", "Spread wings in a strong straight line", "Fold their wings completely", "Move only their tail"],
+                    answer: "Spread wings in a strong straight line"
+                },
+                {
+                    question: "Why is body weight distribution important for birds?",
+                    options: ["It makes them look better", "Most weight in center helps with proper flight balance", "It helps them sing better", "It makes them run faster"],
+                    answer: "Most weight in center helps with proper flight balance"
+                },
+                {
+                    question: "What makes the sides of a bird's body (wings and feathers) different from the center?",
+                    options: ["They are more colorful", "They are much lighter than the center", "They are stronger", "They are more flexible"],
+                    answer: "They are much lighter than the center"
+                },
+                {
+                    question: "Complete this important concept: Migration is the _____ movement of birds from one place to another.",
+                    options: ["daily", "seasonal", "random", "weekly"],
+                    answer: "seasonal"
+                },
+                {
+                    question: "What drives birds to undertake long, difficult migration journeys?",
+                    options: ["Curiosity about new places", "Availability of food, water, weather, temperature etc.", "Following other animals", "Escaping from humans"],
+                    answer: "Availability of food, water, weather, temperature etc."
+                },
+                {
+                    question: "How far and long do many migratory birds travel?",
+                    options: ["Short distances for a few hours", "Very long distances for several days", "Only during nighttime", "Only when weather is perfect"],
+                    answer: "Very long distances for several days"
+                },
+                {
+                    question: "What are birds of prey specifically adapted to hunt?",
+                    options: ["Only large animals", "Mice, rodents and insects for their food", "Only fish and water creatures", "Only plants and seeds"],
+                    answer: "Mice, rodents and insects for their food"
+                },
+                {
+                    question: "What two main adaptations make birds of prey successful hunters?",
+                    options: ["Large size and loud calls", "Powerful eyesight and sharp claws", "Bright colors and long tails", "Fast flying and webbed feet"],
+                    answer: "Powerful eyesight and sharp claws"
+                },
+                {
+                    question: "Which birds are specifically mentioned as examples of successful birds of prey?",
+                    options: ["Sparrows, robins, finches", "Ducks, geese, swans", "Owls, vultures, eagles and hawks", "Pigeons, doves, crows"],
+                    answer: "Owls, vultures, eagles and hawks"
+                },
+                {
+                    question: "According to the summary, what makes birds colorful species across Earth?",
+                    options: ["They live only in colorful places", "They are present on all continents with vivid colors and sounds", "They only eat colorful food", "They migrate to colorful locations"],
+                    answer: "They are present on all continents with vivid colors and sounds"
+                },
+                {
+                    question: "What universal traits do ALL birds share according to the chapter summary?",
+                    options: ["Only flight ability", "Only colorful feathers", "Feathers, wings, beaks or bills and lay eggs", "Only similar sounds"],
+                    answer: "Feathers, wings, beaks or bills and lay eggs"
+                },
+                {
+                    question: "How do these universal bird traits vary among species?",
+                    options: ["They don't vary at all", "They vary depending on their usage", "Only color varies", "Only size varies"],
+                    answer: "They vary depending on their usage"
+                },
+                {
+                    question: "What does the chapter say about flight ability across different bird types?",
+                    options: ["All birds fly exactly the same way", "Flying is common but some birds glide or have restricted flight movements", "Only small birds can fly", "Only birds with certain colors can fly"],
+                    answer: "Flying is common but some birds glide or have restricted flight movements"
+                },
+                {
+                    question: "What specific example illustrates restricted flight movements?",
+                    options: ["Eagles can't fly high", "Ducks can only swim", "Ostrich has restricted flight movements", "Sparrows fly very slowly"],
+                    answer: "Ostrich has restricted flight movements"
+                },
+                {
+                    question: "What enables birds to fly according to the chapter's conclusion?",
+                    options: ["Only the flapping of their wings", "Flapping of wings and lightweight bodies", "Only their lightweight bodies", "Only their strong muscles"],
+                    answer: "Flapping of wings and lightweight bodies"
+                }
+            ];
+
+            // Quiz State
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let userAnswers = new Array(quizData.length).fill(null);
+            let answeredQuestions = 0;
+
+            // DOM Elements
+            const questionNumberEl = document.getElementById('question-number');
+            const totalQuestionsEl = document.getElementById('total-questions');
+            const currentScoreEl = document.getElementById('current-score');
+            const progressBar = document.getElementById('progress-bar');
+            const questionTextEl = document.getElementById('question-text');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackMessageEl = document.getElementById('feedback-message');
+            const scoreEl = document.getElementById('score');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const nextBtnContainer = document.getElementById('next-btn-container');
+            const resultScreen = document.getElementById('result-screen');
+            const finalScoreEl = document.getElementById('final-score');
+            const performanceMessageEl = document.getElementById('performance-message');
+            const restartBtn = document.getElementById('restart-btn');
+            const resetScoreBtn = document.getElementById('reset-score-btn');
+            const jumpInput = document.getElementById('jump-input');
+            const jumpBtn = document.getElementById('jump-btn');
+            const questionArea = document.getElementById('question-area');
+            const quizHeader = document.getElementById('quiz-header');
+
+            // Initialize Quiz
+            function startQuiz() {
+                currentQuestionIndex = 0;
+                score = 0;
+                answeredQuestions = 0;
+                userAnswers.fill(null);
+                updateScoreDisplay();
+                resultScreen.classList.add('hidden');
+                quizHeader.classList.remove('hidden');
+                questionArea.classList.remove('hidden');
+                loadQuestion(currentQuestionIndex);
+            }
+
+            // Load Question
+            function loadQuestion(index) {
+                feedbackMessageEl.textContent = '';
+                nextBtnContainer.classList.remove('opacity-100');
+                nextBtnContainer.classList.add('opacity-0');
+                
+                const questionData = quizData[index];
+                questionTextEl.textContent = questionData.question;
+                questionNumberEl.textContent = index + 1;
+                
+                // Clear and populate options
+                optionsContainer.innerHTML = '';
+                questionData.options.forEach((option, i) => {
+                    const button = document.createElement('button');
+                    button.textContent = option;
+                    button.className = 'quiz-option w-full p-4 border-2 border-gray-300 rounded-xl text-left bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500';
+                    button.addEventListener('click', () => selectAnswer(option, button));
+                    optionsContainer.appendChild(button);
+                });
+                
+                updateNavigationButtons();
+                updateProgressBar();
+                
+                // Show previous answer if exists
+                if (userAnswers[index] !== null) {
+                    showPreviousAnswer();
+                }
+            }
+
+            // Select Answer
+            function selectAnswer(selectedOption, selectedButton) {
+                if (userAnswers[currentQuestionIndex] !== null) return;
+
+                const isCorrect = selectedOption === quizData[currentQuestionIndex].answer;
+                const wasAnswered = userAnswers[currentQuestionIndex] !== null;
+                
+                userAnswers[currentQuestionIndex] = { selected: selectedOption, isCorrect: isCorrect };
+                
+                if (!wasAnswered) {
+                    answeredQuestions++;
+                    if (isCorrect) score++;
+                }
+
+                updateScoreDisplay();
+                highlightAnswers();
+                disableOptions();
+                nextBtnContainer.classList.remove('opacity-0');
+                nextBtnContainer.classList.add('opacity-100');
+
+                // Show feedback
+                if (isCorrect) {
+                    feedbackMessageEl.textContent = "✅ Correct! Well done!";
+                    feedbackMessageEl.className = "text-center font-medium mb-6 min-h-[24px] text-lg text-green-600";
+                } else {
+                    feedbackMessageEl.textContent = `❌ Incorrect. The correct answer is: ${quizData[currentQuestionIndex].answer}`;
+                    feedbackMessageEl.className = "text-center font-medium mb-6 min-h-[24px] text-lg text-red-600";
+                }
+            }
+
+            // Show Previous Answer
+            function showPreviousAnswer() {
+                highlightAnswers();
+                disableOptions();
+                nextBtnContainer.classList.remove('opacity-0');
+                nextBtnContainer.classList.add('opacity-100');
+                
+                const { isCorrect } = userAnswers[currentQuestionIndex];
+                if (isCorrect) {
+                    feedbackMessageEl.textContent = "✅ Correct! Well done!";
+                    feedbackMessageEl.className = "text-center font-medium mb-6 min-h-[24px] text-lg text-green-600";
+                } else {
+                    feedbackMessageEl.textContent = `❌ Incorrect. The correct answer is: ${quizData[currentQuestionIndex].answer}`;
+                    feedbackMessageEl.className = "text-center font-medium mb-6 min-h-[24px] text-lg text-red-600";
+                }
+            }
+
+            // Highlight Answers
+            function highlightAnswers() {
+                const correctAnswer = quizData[currentQuestionIndex].answer;
+                const selectedAnswer = userAnswers[currentQuestionIndex]?.selected;
+
+                Array.from(optionsContainer.children).forEach(button => {
+                    const optionText = button.textContent;
+                    button.classList.remove('selected', 'correct', 'incorrect');
+                    
+                    if (optionText === correctAnswer) {
+                        button.classList.add('correct');
+                        button.classList.remove('border-gray-300');
+                    } else if (optionText === selectedAnswer && optionText !== correctAnswer) {
+                        button.classList.add('incorrect');
+                        button.classList.remove('border-gray-300');
+                    }
+                });
+            }
+
+            // Disable Options
+            function disableOptions() {
+                Array.from(optionsContainer.children).forEach(button => {
+                    button.disabled = true;
+                    button.classList.remove('hover:bg-gray-50');
+                    button.style.cursor = 'not-allowed';
+                });
+            }
+
+            // Update Navigation Buttons
+            function updateNavigationButtons() {
+                prevBtn.disabled = currentQuestionIndex === 0;
+            }
+
+            // Update Score Display
+            function updateScoreDisplay() {
+                scoreEl.textContent = `Score: ${score}/${answeredQuestions}`;
+                currentScoreEl.textContent = score;
+            }
+
+            // Update Progress Bar
+            function updateProgressBar() {
+                const progressPercentage = ((currentQuestionIndex + 1) / quizData.length) * 100;
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+
+            // Show Results
+            function showResults() {
+                quizHeader.classList.add('hidden');
+                questionArea.classList.add('hidden');
+                resultScreen.classList.remove('hidden');
+                
+                const percentage = Math.round((score / quizData.length) * 100);
+                finalScoreEl.textContent = `Your final score is ${score} out of ${quizData.length} (${percentage}%)`;
+                
+                let performanceMessage = "";
+                let bgClass = "";
+                
+                if (percentage >= 90) {
+                    performanceMessage = "🌟 Outstanding! You have excellent knowledge about birds!";
+                    bgClass = "bg-green-100 text-green-800";
+                } else if (percentage >= 80) {
+                    performanceMessage = "🎉 Great job! You know a lot about birds!";
+                    bgClass = "bg-blue-100 text-blue-800";
+                } else if (percentage >= 70) {
+                    performanceMessage = "👍 Good work! You have solid knowledge about birds!";
+                    bgClass = "bg-yellow-100 text-yellow-800";
+                } else if (percentage >= 60) {
+                    performanceMessage = "📚 Not bad! Review the material to improve your understanding.";
+                    bgClass = "bg-orange-100 text-orange-800";
+                } else {
+                    performanceMessage = "🔄 Keep studying! Review the bird lesson and try again.";
+                    bgClass = "bg-red-100 text-red-800";
+                }
+                
+                performanceMessageEl.textContent = performanceMessage;
+                performanceMessageEl.className = `text-lg mb-8 p-6 rounded-2xl ${bgClass}`;
+            }
+
+            // Jump to Question
+            function jumpToQuestion() {
+                const questionNum = parseInt(jumpInput.value);
+                if (questionNum >= 1 && questionNum <= quizData.length) {
+                    currentQuestionIndex = questionNum - 1;
+                    loadQuestion(currentQuestionIndex);
+                    jumpInput.value = '';
+                } else {
+                    alert(`Please enter a number between 1 and ${quizData.length}.`);
+                }
+            }
+
+            // Event Listeners
+            prevBtn.addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    loadQuestion(currentQuestionIndex);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentQuestionIndex < quizData.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion(currentQuestionIndex);
+                } else {
+                    showResults();
+                }
+            });
+
+            restartBtn.addEventListener('click', startQuiz);
+
+            resetScoreBtn.addEventListener('click', () => {
+                if (confirm('Are you sure you want to reset your progress? This will clear all your answers.')) {
+                    startQuiz();
+                }
+            });
+
+            jumpBtn.addEventListener('click', jumpToQuestion);
+
+            jumpInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    jumpToQuestion();
+                }
+            });
+
+            // Initialize
+            totalQuestionsEl.textContent = quizData.length;
+            startQuiz();
+        });
+    </script>
+
+</body>
+</html>
